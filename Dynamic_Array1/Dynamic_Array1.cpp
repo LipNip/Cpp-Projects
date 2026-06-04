@@ -186,7 +186,7 @@ int* replace_element(int* arr, int* size, int num, int newValue) {
     {
         if (arr[i] == num) {
             arr[i] = newValue;
-            break; // для першого входження
+            break; // для першого входження // тест
         }
     }
     return arr;
