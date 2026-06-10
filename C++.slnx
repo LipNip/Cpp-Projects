@@ -5,7 +5,9 @@
   </Configurations>
   <Project Path="ATM/ATM.vcxproj" Id="3d2f8188-dba1-4c04-ba52-bff70b560840" />
   <Project Path="Dynamic_Array1/Dynamic_Array1.vcxproj" Id="91e31447-e9b5-4f5c-b9a5-23683c170de1" />
+  <Project Path="Dynamic_Array3/Dynamic_Array3.vcxproj" Id="e423a84d-49b1-4c7e-9169-f057a793bcaa" />
   <Project Path="Dynemic_Array/Dynemic_Array.vcxproj" Id="46c7cebb-2acf-4f95-a5a0-8c421d009929" />
+  <Project Path="FactorialPointers/FactorialPointers.vcxproj" Id="3d4b9785-a811-4a93-bbef-6d674c306b6a" />
   <Project Path="Function2/Function2.vcxproj" Id="c9e3f328-5839-44a1-adff-51470f3ac996" />
   <Project Path="Function4/Function4.vcxproj" Id="1f001b85-2c0e-4c11-ab7f-ae8fe054d5c9" />
   <Project Path="Functions1/Functions1.vcxproj" Id="eb5de28e-214f-4c5f-869e-ad4c6a089959" />

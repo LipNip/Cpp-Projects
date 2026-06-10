@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//-	заповнює динамічний масив із n елементів випадковими числами
 void set_arr(int* arr, int size) {
     for (int i = 0; i < size; i++)
     {
@@ -8,6 +9,7 @@ void set_arr(int* arr, int size) {
     }
 }
 
+//-	виводить масив на екран;
 void print_arr(int* arr, int size) {
     cout << "SIZE: " << size << "\n";
     cout << string(50, '-') << "\n";
@@ -19,6 +21,7 @@ void print_arr(int* arr, int size) {
 
 }
 
+//-	добавляє елемент вкінець масиву;
 int* add_end(int* arr, int* size, int num) {
     int* p = new int[*size + 1];
 
@@ -34,6 +37,7 @@ int* add_end(int* arr, int* size, int num) {
     return p;
 }
 
+//-	добавляє елемент на початок масиву;
 int* add_begin(int* arr, int* size, int num) {
     int* p = new int[*size + 1];
 
@@ -49,6 +53,7 @@ int* add_begin(int* arr, int* size, int num) {
     return p;
 }
 
+//- добавляє елемент в потрібну позицію;
 int* add_position(int* arr, int* size, int num, int pos) {
     int* p = new int[*size + 1];
 
@@ -70,6 +75,7 @@ int* add_position(int* arr, int* size, int num, int pos) {
     return p;
 }
 
+//- видаляє з масиву перший елемент;
 int* delete_element(int* arr, int* size) {
     int* p = new int[*size - 1];
 
@@ -84,7 +90,7 @@ int* delete_element(int* arr, int* size) {
     return p;
 }
 
-
+//-	видаляє з масиву перший елемент;
 int* delete_begin(int* arr, int* size) {
     int* p = new int[*size - 1];
 
@@ -99,6 +105,7 @@ int* delete_begin(int* arr, int* size) {
     return p;
 }
 
+//-	видаляє елемент з потрібної позиції;
 int* delete_position(int* arr, int* size, int pos) {
     int* p = new int[*size - 1];
 
@@ -117,7 +124,7 @@ int* delete_position(int* arr, int* size, int pos) {
     (*size)--; 
     return p;
 }
-
+//- видаляє масив;
 int* delete_all(int* arr, int* size) {
     *size = 0;
     delete[] arr;
@@ -186,7 +193,7 @@ int* replace_element(int* arr, int* size, int num, int newValue) {
     {
         if (arr[i] == num) {
             arr[i] = newValue;
-            break; // для першого входження // тест
+            break; // для першого входження
         }
     }
     return arr;
@@ -201,6 +208,12 @@ int* replace_element_position(int* arr, int size, int pos, int num) {
     return arr;
 }
 
+//- написати окремо функцію, яка перевіряє число на парність
+bool isEven(int num) {
+    return num % 2 == 0;
+}
+
+//-	видаляє всі елементи з парними індексами і повертає вказівник на новий масив(
 int* delete_even_index_elements(int* arr, int* size) {
     int newSize = 0;
 
@@ -227,6 +240,7 @@ int* delete_even_index_elements(int* arr, int* size) {
     return p;
 }
 
+//- видаляє всі елементи з непарними індексами і повертає вказівник на новий масив;
 int* delete_odd_index_elements(int* arr, int* size) {
     int newSize = 0;
 
@@ -253,12 +267,13 @@ int* delete_odd_index_elements(int* arr, int* size) {
     return p;
 }
 
-int* delete_even_index_elements(int* arr, int* size) {
+//-	видаляє всі елементи, значення яких є парними числами і повертає вказівник на новий масив;
+int* delete_even_elements(int* arr, int* size) {
     int newSize = 0;
 
     for (int i = 0; i < *size; i++)
     {
-        if (i % 2 != 0) {
+        if (arr[i] % 2 != 0) {
             newSize++;
         }
     }
@@ -268,7 +283,7 @@ int* delete_even_index_elements(int* arr, int* size) {
     int j = 0;
     for (int i = 0; i < *size; i++)
     {
-        if (i % 2 != 0) {
+        if (arr[i] % 2 != 0) {
             p[j++] = arr[i];
         }
     }
@@ -279,12 +294,57 @@ int* delete_even_index_elements(int* arr, int* size) {
     return p;
 }
 
-int* delete_odd_elements(int* arr, int* size) {
+//- функція, яка повертає значення true, якщо число просте і false
+bool isPrime(int num) {
+    if (num < 2) {
+        return false;
+    }
+
+    for (int i = 2; i < num; i++)
+    {
+        if (num % i == 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+//-	видаляє всі елементи, значення яких є простими числами і повертає вказівник на новий масив;
+int* delete_prime_elements(int* arr, int* size) {
     int newSize = 0;
 
     for (int i = 0; i < *size; i++)
     {
-        if (arr[i] % 2 == 0) {
+        if (!isPrime(arr[i])) {
+            newSize++;
+        }
+    }
+
+    int* p = new int[newSize];
+    
+    int j = 0;
+    for (int i = 0; i < *size; i++)
+    {
+        if (!isPrime(arr[i])) {
+            p[j++] = arr[i];
+        }
+    }
+   
+    delete[] arr;
+    arr = nullptr;
+    *size = newSize;
+
+    return p;
+}
+
+//-	видаляє всі елементи, значення яких є від’ємними числами і повертає вказівник на новий масив.
+int* delete_negative_elements(int* arr, int* size) {
+    int newSize = 0;
+
+    for (int i = 0; i < *size; i++)
+    {
+        if (arr[i] >= 0) {
             newSize++;
         }
     }
@@ -294,7 +354,7 @@ int* delete_odd_elements(int* arr, int* size) {
     int j = 0;
     for (int i = 0; i < *size; i++)
     {
-        if (arr[i] % 2 == 0) {
+        if (arr[i] >= 0) {
             p[j++] = arr[i];
         }
     }
@@ -302,9 +362,49 @@ int* delete_odd_elements(int* arr, int* size) {
     delete[] arr;
     arr = nullptr;
     *size = newSize;
+
     return p;
 }
 
+//-	видаляє всі елементи, значення яких є 0 і повертає вказівник на новий масив.
+int* delete_zero_elements(int* arr, int* size) {
+    int newSize = 0;
+
+    for (int i = 0; i < *size; i++)
+    {
+        if (arr[i] != 0) {
+            newSize++;
+        }
+    }
+
+    int* p = new int[newSize];
+
+    int j = 0;
+    for (int i = 0; i < *size; i++)
+    {
+        if (arr[i] != 0) {
+            p[j++] = arr[i];
+        }
+    }
+
+    delete[] arr;
+    arr = nullptr;
+    *size = newSize;
+
+    return p;
+}
+
+//-	перевертає масив(reverse)
+int* reverse_arr(int* arr, int size) {
+    int* p = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        p[i] = arr[size - 1 - i];
+    }
+    delete[] arr;
+    arr = nullptr;
+    return p;
+}
 
 int menu() {
     int choise;
@@ -312,8 +412,8 @@ int menu() {
     cout << "1 - ADD END\n";
     cout << "2 - ADD BEGIN\n";
     cout << "3 - ADD POSITION\n";
-    cout << "4 - DELETE ELEMENT\n";
-    cout << "5 - DELETE BEGIN\n";
+    cout << "4 - DELETE LAST ELEMENT\n";
+    cout << "5 - DELETE FIRST ELEMENT\n";
     cout << "6 - DELETE POSITION\n";
     cout << "7 - DELETE ARRAY\n";
     cout << "8 - DELETE POSITION RANGE\n";
@@ -323,6 +423,10 @@ int menu() {
     cout << "12 - DELETE ELEMENTS WITH EVEN INDEXES\n";
     cout << "13 - DELETE ELEMENTS WITH ODD INDEXES\n";
     cout << "14 - DELETE ELEMENTS WITH EVEN ELEMENTS\n";
+    cout << "15 - DELETE PRIME ELEMENTS\n";
+    cout << "16 - DELETE NEGATIVE ELEMENTS\n";
+    cout << "17 - DELETE ZERO ELEMENTS\n";
+    cout << "18 - REVERSE ARRAY\n";
 
     cout << "Enter choice: ";
     cin >> choise;
@@ -354,7 +458,6 @@ int main()
         case 1:
             cout << "Enter number: ";
             cin >> num;
-
             arr = add_end(arr, &size, num);
             break;
         case 2:
@@ -417,7 +520,19 @@ int main()
             arr = delete_odd_index_elements(arr, &size);
             break;
         case 14:
-            arr = delete_odd_elements(arr, &size);
+            arr = delete_even_elements(arr, &size);
+            break;
+        case 15:
+            arr = delete_prime_elements(arr, &size);
+            break;
+        case 16:
+            arr = delete_negative_elements(arr, &size);
+            break;
+        case 17:
+            arr = delete_zero_elements(arr, &size);
+            break;
+        case 18:
+            arr = reverse_arr(arr, size);
             break;
         }
 
