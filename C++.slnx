@@ -22,6 +22,13 @@
   <Project Path="Pointers/Pointers.vcxproj" Id="f2af22d5-9d5f-415a-9e79-1b9e0926c871" />
   <Project Path="Pointers1/Pointers1.vcxproj" Id="d9eef690-0305-4161-9650-d6a217c8d205" />
   <Project Path="Pointers2/Pointers2.vcxproj" Id="8713de10-0f69-44c1-b348-201bd60abca8" />
+  <Project Path="Strings_Classwork/Strings_Classwork.vcxproj" Id="b23ff4fa-140c-4745-b9f3-ea7acd7345a2" />
+  <Project Path="Strings_Homework1/Strings_Homework1.vcxproj" Id="a90cf2fa-3aff-4fd3-998e-5e54d9c027d5" />
+  <Project Path="Strings_Homework2/Strings_Homework2.vcxproj" Id="8ed956d1-1456-4391-a4c6-782f22a4cfcd" />
+  <Project Path="Strings_Homework3/Strings_Homework3.vcxproj" Id="1c83619f-742c-4e30-84dd-1e544477bc96" />
+  <Project Path="Strings_Homework4/Strings_Homework4.vcxproj" Id="114f4371-885e-4a76-bf7e-cee48ef7404b" />
+  <Project Path="Strings_Homework5/Strings_Homework5.vcxproj" Id="4438201a-98db-45f2-b403-74e13ddff4d2" />
+  <Project Path="Strings_Homework7/Strings_Homework7.vcxproj" Id="26d37566-9504-48f7-a815-d3cad4485439" />
   <Project Path="TEST/TEST.vcxproj" Id="3eaa5057-8e80-4d0c-be26-d1e30e4dc35f" />
   <Project Path="Tic-tac-toe/Tic-tac-toe.vcxproj" Id="2897da57-25c1-4608-b6e5-86440b4a3a52" />
   <Project Path="Work1/Work1.vcxproj" Id="dea8b29a-e47a-4966-b418-d9fe1f9776e7" />
