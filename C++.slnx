@@ -4,12 +4,16 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="ATM/ATM.vcxproj" Id="3d2f8188-dba1-4c04-ba52-bff70b560840" />
+  <Project Path="DynamicArrayFunctions/DynamicArrayFunctions.vcxproj" Id="236d1b85-58a6-45d1-9d8b-96d5b7ea69b8" />
+  <Project Path="DynamicPhoneBook/DynamicPhoneBook.vcxproj" Id="d4fcbfe8-bb9d-439a-8cae-adc4fdbf7177" />
   <Project Path="Dynamic_Array1/Dynamic_Array1.vcxproj" Id="91e31447-e9b5-4f5c-b9a5-23683c170de1" />
   <Project Path="Dynamic_Array3/Dynamic_Array3.vcxproj" Id="e423a84d-49b1-4c7e-9169-f057a793bcaa" />
   <Project Path="Dynemic_Array/Dynemic_Array.vcxproj" Id="46c7cebb-2acf-4f95-a5a0-8c421d009929" />
   <Project Path="FactorialPointers/FactorialPointers.vcxproj" Id="3d4b9785-a811-4a93-bbef-6d674c306b6a" />
   <Project Path="Function2/Function2.vcxproj" Id="c9e3f328-5839-44a1-adff-51470f3ac996" />
   <Project Path="Function4/Function4.vcxproj" Id="1f001b85-2c0e-4c11-ab7f-ae8fe054d5c9" />
+  <Project Path="FunctionPointers_FilterNumbers/FunctionPointers_FilterNumbers.vcxproj" Id="4fe3ad14-1f4c-4f67-9e60-d9f3945db87f" />
+  <Project Path="FunctionPointers_MinMaxAverage/FunctionPointers_MinMaxAverage.vcxproj" Id="867775d7-b201-4d13-8fdc-8f3ebf5eba60" />
   <Project Path="Functions1/Functions1.vcxproj" Id="eb5de28e-214f-4c5f-869e-ad4c6a089959" />
   <Project Path="Functions10/Functions10.vcxproj" Id="4d46898c-98b9-41e0-96dd-9681fdabaf6f" />
   <Project Path="Functions11/Functions11.vcxproj" Id="89baa342-e286-466f-94f5-53e238c8528b" />
