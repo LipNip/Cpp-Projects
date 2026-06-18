@@ -1,4 +1,6 @@
 #include <iostream>
+#include <ctime> // для time(NULL)
+#include <cstdlib> // для rand(), srand(), system()
 using namespace std;
 
 void set_arr(double* arr, int size) {
