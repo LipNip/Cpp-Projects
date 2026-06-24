@@ -5,6 +5,7 @@
   </Configurations>
   <Project Path="ATM/ATM.vcxproj" Id="3d2f8188-dba1-4c04-ba52-bff70b560840" />
   <Project Path="DynamicArrayFunctions/DynamicArrayFunctions.vcxproj" Id="236d1b85-58a6-45d1-9d8b-96d5b7ea69b8" />
+  <Project Path="DynamicMatrix/DynamicMatrix.vcxproj" Id="f9bcf4e9-e8e7-4e03-b808-00960771fa13" />
   <Project Path="DynamicPhoneBook/DynamicPhoneBook.vcxproj" Id="d4fcbfe8-bb9d-439a-8cae-adc4fdbf7177" />
   <Project Path="Dynamic_Array1/Dynamic_Array1.vcxproj" Id="91e31447-e9b5-4f5c-b9a5-23683c170de1" />
   <Project Path="Dynamic_Array3/Dynamic_Array3.vcxproj" Id="e423a84d-49b1-4c7e-9169-f057a793bcaa" />
