@@ -4,6 +4,7 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="ATM/ATM.vcxproj" Id="3d2f8188-dba1-4c04-ba52-bff70b560840" />
+  <Project Path="ContactBookFile_5/ContactBookFile_5.vcxproj" Id="4589adae-cf90-4d75-b8e7-556bd9f2cfbc" />
   <Project Path="DynamicArrayFunctions/DynamicArrayFunctions.vcxproj" Id="236d1b85-58a6-45d1-9d8b-96d5b7ea69b8" />
   <Project Path="DynamicMatrix/DynamicMatrix.vcxproj" Id="f9bcf4e9-e8e7-4e03-b808-00960771fa13" />
   <Project Path="DynamicPhoneBook/DynamicPhoneBook.vcxproj" Id="d4fcbfe8-bb9d-439a-8cae-adc4fdbf7177" />
@@ -11,6 +12,10 @@
   <Project Path="Dynamic_Array3/Dynamic_Array3.vcxproj" Id="e423a84d-49b1-4c7e-9169-f057a793bcaa" />
   <Project Path="Dynemic_Array/Dynemic_Array.vcxproj" Id="46c7cebb-2acf-4f95-a5a0-8c421d009929" />
   <Project Path="FactorialPointers/FactorialPointers.vcxproj" Id="3d4b9785-a811-4a93-bbef-6d674c306b6a" />
+  <Project Path="FileCompareStrings_1/FileCompareStrings_1.vcxproj" Id="46befc05-d1af-4315-ae32-a0ebcab219d1" />
+  <Project Path="FileReverseText_2/FileReverseText_2.vcxproj" Id="2ee3d68c-19d2-4e0c-87e3-2a404f0ef4cc" />
+  <Project Path="Files_Classwork/Files_Classwork.vcxproj" Id="06ae1fa9-f610-4b20-995f-5f7392e68be3" />
+  <Project Path="FileTextStatistics_3/FileTextStatistics_3.vcxproj" Id="ad0cfc04-1cd0-4f92-b76d-7e3a40bda5fc" />
   <Project Path="Function2/Function2.vcxproj" Id="c9e3f328-5839-44a1-adff-51470f3ac996" />
   <Project Path="Function4/Function4.vcxproj" Id="1f001b85-2c0e-4c11-ab7f-ae8fe054d5c9" />
   <Project Path="FunctionPointers_FilterNumbers/FunctionPointers_FilterNumbers.vcxproj" Id="4fe3ad14-1f4c-4f67-9e60-d9f3945db87f" />
@@ -24,9 +29,13 @@
   <Project Path="Functions7/Functions7.vcxproj" Id="e54c43a7-68a8-410b-b284-ccce062b058f" />
   <Project Path="Functions8/Functions8.vcxproj" Id="8f0e990e-2709-441d-aca5-5c5310fbecdc" />
   <Project Path="Functions9/Functions9.vcxproj" Id="3aad6beb-abab-401a-b7b3-01c4396d2243" />
+  <Project Path="Guess the word v2/Guess the word v2.vcxproj" Id="884030f8-84ce-4846-bf36-7011a2a5d5a5" />
+  <Project Path="Guess the word/Guess the word.vcxproj" Id="72b68010-def5-4d3e-b29a-daf0963ed913" />
+  <Project Path="MatrixFileIO_4/MatrixFileIO_4.vcxproj" Id="33e2dea5-674b-4e61-a0c4-cfa511bc488b" />
   <Project Path="Pointers/Pointers.vcxproj" Id="f2af22d5-9d5f-415a-9e79-1b9e0926c871" />
   <Project Path="Pointers1/Pointers1.vcxproj" Id="d9eef690-0305-4161-9650-d6a217c8d205" />
   <Project Path="Pointers2/Pointers2.vcxproj" Id="8713de10-0f69-44c1-b348-201bd60abca8" />
+  <Project Path="StringOperations/StringOperations.vcxproj" Id="782352a0-6ee7-4d5f-8769-578a0b2ae5bf" />
   <Project Path="Strings_Classwork/Strings_Classwork.vcxproj" Id="b23ff4fa-140c-4745-b9f3-ea7acd7345a2" />
   <Project Path="Strings_Homework1/Strings_Homework1.vcxproj" Id="a90cf2fa-3aff-4fd3-998e-5e54d9c027d5" />
   <Project Path="Strings_Homework2/Strings_Homework2.vcxproj" Id="8ed956d1-1456-4391-a4c6-782f22a4cfcd" />
@@ -35,7 +44,14 @@
   <Project Path="Strings_Homework5/Strings_Homework5.vcxproj" Id="4438201a-98db-45f2-b403-74e13ddff4d2" />
   <Project Path="Strings_Homework6/Strings_Homework6.vcxproj" Id="144d6656-5e8f-4d08-a6ce-a66120086562" />
   <Project Path="Strings_Homework7/Strings_Homework7.vcxproj" Id="26d37566-9504-48f7-a815-d3cad4485439" />
+  <Project Path="StructArrayFileIO_7/StructArrayFileIO_7.vcxproj" Id="7db5f55e-f64c-4253-8f75-046a85b8d828" />
+  <Project Path="StudentStructIO_6/StudentStructIO_6.vcxproj" Id="dfa27cdf-c0e9-4d43-8c95-b5f417f984c2" />
+  <Project Path="Task1_WashingMachine/Task1_WashingMachine.vcxproj" Id="d77375ba-ddc7-4cd9-8020-0c2153a02553" />
+  <Project Path="Task2_PointsDistance/Task2_PointsDistance.vcxproj" Id="f89b0151-f99b-488a-bf50-caa82fa56fb8" />
+  <Project Path="Task3_Garage/Task3_Garage.vcxproj" Id="8f060363-5b3b-4b5b-9987-00cea9286aff" />
+  <Project Path="Task4_VideoStore/Task4_VideoStore.vcxproj" Id="050fb4aa-d929-4a4b-8367-79580654a916" />
   <Project Path="TEST/TEST.vcxproj" Id="3eaa5057-8e80-4d0c-be26-d1e30e4dc35f" />
+  <Project Path="TextEncryptionTool_8/TextEncryptionTool_8.vcxproj" Id="77531f04-ba4d-4d55-b9a7-e5e2055b4ef1" />
   <Project Path="Tic-tac-toe/Tic-tac-toe.vcxproj" Id="2897da57-25c1-4608-b6e5-86440b4a3a52" />
   <Project Path="Work1/Work1.vcxproj" Id="dea8b29a-e47a-4966-b418-d9fe1f9776e7" />
   <Project Path="Work10/Work10.vcxproj" Id="a383def1-d6c1-42bd-baa2-e9241a7adbdd" />

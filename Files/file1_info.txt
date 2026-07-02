@@ -1,0 +1,5 @@
+Numbers: 0
+Letters: 20
+Symbols: 23
+Spaces: 2
+Lines: 2

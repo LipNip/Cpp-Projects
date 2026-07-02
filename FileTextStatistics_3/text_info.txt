@@ -1,0 +1,5 @@
+Symbols: 1087
+Lines: 9
+Spaces: 159
+Letters: 890
+Numbers: 0
