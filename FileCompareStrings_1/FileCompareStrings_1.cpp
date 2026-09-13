@@ -4,7 +4,6 @@
 #include <cstring> // strcmp
 using namespace std;
 
-
 int main()
 {
     char path[] = "file1.txt";

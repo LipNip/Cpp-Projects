@@ -11,6 +11,7 @@
   <Project Path="Dynamic_Array1/Dynamic_Array1.vcxproj" Id="91e31447-e9b5-4f5c-b9a5-23683c170de1" />
   <Project Path="Dynamic_Array3/Dynamic_Array3.vcxproj" Id="e423a84d-49b1-4c7e-9169-f057a793bcaa" />
   <Project Path="Dynemic_Array/Dynemic_Array.vcxproj" Id="46c7cebb-2acf-4f95-a5a0-8c421d009929" />
+  <Project Path="EmployeeSystem_9/EmployeeSystem_9.vcxproj" Id="23d9d4f6-afd9-4296-a8c5-5529db43d5fa" />
   <Project Path="FactorialPointers/FactorialPointers.vcxproj" Id="3d4b9785-a811-4a93-bbef-6d674c306b6a" />
   <Project Path="FileCompareStrings_1/FileCompareStrings_1.vcxproj" Id="46befc05-d1af-4315-ae32-a0ebcab219d1" />
   <Project Path="FileReverseText_2/FileReverseText_2.vcxproj" Id="2ee3d68c-19d2-4e0c-87e3-2a404f0ef4cc" />
@@ -31,7 +32,11 @@
   <Project Path="Functions9/Functions9.vcxproj" Id="3aad6beb-abab-401a-b7b3-01c4396d2243" />
   <Project Path="Guess the word v2/Guess the word v2.vcxproj" Id="884030f8-84ce-4846-bf36-7011a2a5d5a5" />
   <Project Path="Guess the word/Guess the word.vcxproj" Id="72b68010-def5-4d3e-b29a-daf0963ed913" />
+  <Project Path="key/key.vcxproj" Id="ff779c60-80a7-4827-83f2-9435ed3c3107" />
   <Project Path="MatrixFileIO_4/MatrixFileIO_4.vcxproj" Id="33e2dea5-674b-4e61-a0c4-cfa511bc488b" />
+  <Project Path="OOP_1/OOP_1.vcxproj" Id="35377a18-27b1-46ea-95b9-e2c2a93ab25c" />
+  <Project Path="OOP_2/OOP_2.vcxproj" Id="7f58d4a1-7f07-4212-9d91-46e9d911272f" />
+  <Project Path="OOP_3/OOP_3.vcxproj" Id="a056b621-a4eb-4c8f-bece-0c772dac2ca8" />
   <Project Path="Pointers/Pointers.vcxproj" Id="f2af22d5-9d5f-415a-9e79-1b9e0926c871" />
   <Project Path="Pointers1/Pointers1.vcxproj" Id="d9eef690-0305-4161-9650-d6a217c8d205" />
   <Project Path="Pointers2/Pointers2.vcxproj" Id="8713de10-0f69-44c1-b348-201bd60abca8" />
@@ -53,6 +58,8 @@
   <Project Path="TEST/TEST.vcxproj" Id="3eaa5057-8e80-4d0c-be26-d1e30e4dc35f" />
   <Project Path="TextEncryptionTool_8/TextEncryptionTool_8.vcxproj" Id="77531f04-ba4d-4d55-b9a7-e5e2055b4ef1" />
   <Project Path="Tic-tac-toe/Tic-tac-toe.vcxproj" Id="2897da57-25c1-4608-b6e5-86440b4a3a52" />
+  <Project Path="Timer/Timer.vcxproj" Id="963ccc13-e68f-4c4d-bcf4-8d708a289d50" />
+  <Project Path="VectorClass_3/VectorClass_3.vcxproj" Id="e9a026de-e573-451f-8ae5-7dec37aa095e" />
   <Project Path="Work1/Work1.vcxproj" Id="dea8b29a-e47a-4966-b418-d9fe1f9776e7" />
   <Project Path="Work10/Work10.vcxproj" Id="a383def1-d6c1-42bd-baa2-e9241a7adbdd" />
   <Project Path="Work11/Work11.vcxproj" Id="e1993e6f-35b1-41f6-bd41-e9f9f9398671" />

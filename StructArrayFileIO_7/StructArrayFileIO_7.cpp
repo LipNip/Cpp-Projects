@@ -56,20 +56,28 @@ int main()
 		cout << "Error opening file for reading!!!\n";
 		return -1;
 	}
-
-	char result[100000];
-
-	int i = 0;
-	while (!feof(file_r)) {
-	    result[i] = fgetc(file_r);
-	    i++;
+	
+	Student* loaded_students = new Student[size];
+	
+	for (int i = 0; i < size; i++) {
+		// fscanf повертає кількість успішно зчитаних аргументів (має бути 3)
+		if (fscanf(file_r, "%s %s %i", loaded_students[i].name, loaded_students[i].surname, &loaded_students[i].age) != 3) {
+			cout << "Data read error for student #" << i + 1 << "\n";
+			break;
+		}
 	}
-
-	result[i - 1] = '\0';
 	fclose(file_r);
 
-	cout << "\n" << result << "\n";
+	cout << "\nData successfully loaded back into the structure array:\n";
 
+	for (int i = 0; i < size; i++) {
+		cout << "Student #" << i + 1 << "\n";
+		cout << "Surname: " << loaded_students[i].surname << "\n";
+		cout << "Name: " << loaded_students[i].name << "\n";
+		cout << "Age: " << loaded_students[i].age << "\n\n";
+	}
+
+	delete[] loaded_students;
 	delete[] students;
 	cout << "\n\n";
 	return 0;
