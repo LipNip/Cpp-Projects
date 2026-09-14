@@ -13,7 +13,7 @@ public:
     }
     Vector(int size) {
         this->size = size;
-        data = new int[size];
+        data = new int[size]{0};
     }
     Vector(const Vector& other) {
         this->size = other.size;
@@ -63,6 +63,10 @@ public:
         size++;
     }
     void add_position(int value, int position) {
+        if (position < 0 || position > size) { // Перевіряємо, чи існує така позиція
+            cout << "Error: Invalid position!\n";
+            return;
+        }
         int* p = new int[size + 1];
         for (int i = 0; i < position; i++)
         {
@@ -79,6 +83,7 @@ public:
         size++;
     }
     void remove_begin() {
+        if (size == 0) return; // Якщо масив порожній, нічого не робимо
         int* p = new int[size - 1];
         for (int i = 0; i < size - 1; i++)
         {
@@ -90,6 +95,7 @@ public:
         size--;
     }
     void remove_end() {
+        if (size == 0) return;
         int* p = new int[size - 1];
         for (int i = 0; i < size - 1; i++)
         {
@@ -101,6 +107,10 @@ public:
         size--;
     }
     void remove_position(int position) {
+        if (position < 0 || position >= size) { // Тут >= бо не можна видалити елемент за межами
+            cout << "Error: Invalid position!\n";
+            return;
+        }
         int* p = new int[size - 1];
         for (int i = 0; i < position; i++)
         {
@@ -121,6 +131,10 @@ public:
         size = 0;
     }
     int return_max() {
+        if (size == 0) {
+            cout << "Array is empty!\n";
+            return 0;
+        }
         int max = data[0];
         for (int i = 0; i < size; i++)
         {
@@ -131,6 +145,10 @@ public:
         return max;
     }
     int return_min() {
+        if (size == 0) {
+            cout << "Array is empty!\n";
+            return 0;
+        }
         int min = data[0];
         for (int i = 0; i < size; i++)
         {
@@ -144,6 +162,10 @@ public:
         return size;
     }
     int return_byIndex(int index) {
+        if (index < 0 || index >= size) {
+            cout << "Error: Invalid index!\n";
+            return 0;
+        }
         return data[index];
     }
     //Bubble Sort
@@ -170,14 +192,11 @@ public:
         }
     }
     void reverse_arr() {
-        int* p = new int[size];
-        for (int i = 0; i < size; i++)
-        {
-            p[i] = data[size - 1 - i];
+        for (int i = 0; i < size / 2; i++) {
+            int temp = data[i];
+            data[i] = data[size - 1 - i];
+            data[size - 1 - i] = temp;
         }
-        delete[] data;
-        data = p;
-        p = nullptr;
     }
 };
 
