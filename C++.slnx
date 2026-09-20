@@ -34,6 +34,7 @@
   <Project Path="Guess the word v2/Guess the word v2.vcxproj" Id="884030f8-84ce-4846-bf36-7011a2a5d5a5" />
   <Project Path="Guess the word/Guess the word.vcxproj" Id="72b68010-def5-4d3e-b29a-daf0963ed913" />
   <Project Path="key/key.vcxproj" Id="ff779c60-80a7-4827-83f2-9435ed3c3107" />
+  <Project Path="Lab2_TrainSystem/Lab2_TrainSystem.vcxproj" Id="d1eff1a0-b84e-4447-8a67-048458ecd208" />
   <Project Path="MatrixFileIO_4/MatrixFileIO_4.vcxproj" Id="33e2dea5-674b-4e61-a0c4-cfa511bc488b" />
   <Project Path="OOP_1/OOP_1.vcxproj" Id="35377a18-27b1-46ea-95b9-e2c2a93ab25c" />
   <Project Path="OOP_2/OOP_2.vcxproj" Id="7f58d4a1-7f07-4212-9d91-46e9d911272f" />
@@ -41,6 +42,7 @@
   <Project Path="Pointers/Pointers.vcxproj" Id="f2af22d5-9d5f-415a-9e79-1b9e0926c871" />
   <Project Path="Pointers1/Pointers1.vcxproj" Id="d9eef690-0305-4161-9650-d6a217c8d205" />
   <Project Path="Pointers2/Pointers2.vcxproj" Id="8713de10-0f69-44c1-b348-201bd60abca8" />
+  <Project Path="StringClass_2/StringClass_2.vcxproj" Id="d9017836-e05b-40d9-bdae-d70bf7d468a9" />
   <Project Path="StringOperations/StringOperations.vcxproj" Id="782352a0-6ee7-4d5f-8769-578a0b2ae5bf" />
   <Project Path="Strings_Classwork/Strings_Classwork.vcxproj" Id="b23ff4fa-140c-4745-b9f3-ea7acd7345a2" />
   <Project Path="Strings_Homework1/Strings_Homework1.vcxproj" Id="a90cf2fa-3aff-4fd3-998e-5e54d9c027d5" />

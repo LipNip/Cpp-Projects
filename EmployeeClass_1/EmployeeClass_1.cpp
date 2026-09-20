@@ -11,6 +11,7 @@ class Employee {
 public:
     Employee() {
         surname = new char[100];
+        surname[0] = '\0';
         age = 0;
         gender = '-';
         salary = 0;
@@ -36,8 +37,10 @@ public:
     }
 
     void set() {
+        char tempBuffer[256];   // щоб не вийти за межі
         cout << "Enter surname: ";
-        gets_s(surname, 100);
+        gets_s(tempBuffer, 256);
+        setSurname(tempBuffer);
         cout << "Enter age: ";
         cin >> age;
         cout << "Enter gender (M/F): ";
@@ -72,29 +75,40 @@ public:
     void setPhone(const char* phone) { strcpy_s(this->phone, 20, phone); }
     const char* getPhone() const { return phone; }
 
-    void print() {
+    void print() const {
         cout << "Employee: " << surname << " | Age: " << age
             << " | Gender: " << gender << " | Salary: " << salary
             << " | Phone: " << phone << "\n";
-    }
-
-    void showEmployeeInfo(Employee emp) {
-        emp.print();
-    }
-
-    Employee createDefaultManager() {
-        Employee manager("Petrov", 35, 'M', 25000.50, "+380671112233");
-        return manager;
-    }
+    }  
 };
+
+void showEmployeeInfo(Employee emp) {
+    emp.print();
+}
+
+Employee createDefaultManager() {
+    Employee manager("Petrov", 35, 'M', 25000.50, "+380671112233");
+    return manager;
+}
 
 int main()
 {
     Employee emp1("Ivanov", 28, 'M', 18500.0, "+380931234567");
     emp1.print();
-    emp1.setSurname("Petrov");
-    emp1.print();
     
+    cout << "\nCASE 1: Direct initialization from another object\n";
+    Employee emp2 = emp1;
+    cout << "emp2 data: ";
+    emp2.print();
+
+    cout << "\nCASE 2: Passing object to a function by value\n";
+    showEmployeeInfo(emp1);
+
+    cout << "\nCASE 3: Returning object from a function by value\n";
+    Employee emp3 = createDefaultManager();
+    cout << "emp3 data: ";
+    emp3.print();
+
     cout << "\n\n";
     return 0;
 }

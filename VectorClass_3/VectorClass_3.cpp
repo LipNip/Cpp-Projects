@@ -32,7 +32,7 @@ public:
             data[i] = rand() % 101 - 50;
         }
     }
-    void print_arr() {
+    void print_arr() const {
         for (int i = 0; i < size; i++)
         {
             cout << data[i] << " ";
@@ -130,7 +130,7 @@ public:
         data = nullptr;
         size = 0;
     }
-    int return_max() {
+    int return_max() const {
         if (size == 0) {
             cout << "Array is empty!\n";
             return 0;
@@ -144,7 +144,7 @@ public:
         }
         return max;
     }
-    int return_min() {
+    int return_min() const {
         if (size == 0) {
             cout << "Array is empty!\n";
             return 0;
@@ -158,10 +158,10 @@ public:
         }
         return min;
     }
-    int return_size() {
+    int return_size() const {
         return size;
     }
-    int return_byIndex(int index) {
+    int return_byIndex(int index) const {
         if (index < 0 || index >= size) {
             cout << "Error: Invalid index!\n";
             return 0;
