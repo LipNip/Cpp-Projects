@@ -198,6 +198,64 @@ public:
             data[size - 1 - i] = temp;
         }
     }
+
+    bool operator==(const Vector& other) const {
+        if (size != other.size) { return false; }
+        for (int i = 0; i < size; i++)
+        {
+            if (data[i] != other.data[i]) { return false; }
+        }
+        return true;
+    }
+
+    bool operator!=(const Vector& other) const {
+        return !(*this == other);
+    }
+
+    Vector operator+(const Vector& other) const {
+        Vector result(size + other.size);
+        for (int i = 0; i < size; i++)
+        {
+            result.data[i] = data[i];
+        }
+        for (int i = 0; i < other.size; i++)
+        {
+            result.data[size + i] = other.data[i];
+        }
+        return result;
+    }
+
+    Vector& operator=(const Vector& other) {
+        if (this != &other) {
+            delete[] data;
+            size = other.size;
+            if (size > 0) {
+                data = new int[size];
+                for (int i = 0; i < size; i++)
+                {
+                    data[i] = other.data[i];
+                }
+            }
+            else {
+                data = nullptr;
+            }
+        }
+        return *this;
+    }
+
+    int& operator[](int index) {
+        if (index < 0 || index >= size) {
+            throw out_of_range("Index out of bounds");
+        }
+        return data[index];
+    }
+
+    const int& operator[](int index) const {
+        if (index < 0 || index >= size) {
+            throw out_of_range("Index out of bounds");
+        }
+        return data[index];
+    }
 };
 
 int menu() {

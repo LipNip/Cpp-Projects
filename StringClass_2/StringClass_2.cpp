@@ -1,27 +1,32 @@
 #include <iostream>
 #include <cstring> // strlen(), strcpy_s()
+#include <stdexcept>
 using namespace std;
 
 class String {
     char* str;
     int capacity;
 public:
+    // Конструктор по замовчуванню, що дозволяє створити стрічку довжиною 80 символів;
     String() {
         capacity = 80;
         str = new char[capacity + 1]; // + 1 для '\0'
         str[0] = '\0';
     }
+    // Конструктор, що дозволяє створювати стрічку довільного розміру;
     String(int size) {
         capacity = size;
         str = new char[capacity + 1];
         str[0] = '\0';
     }
+    // Конструктор, який створює стрічку і ініціалізує її стрічкою, отриманою від користувача, як параметр;
     String(const char* text) {
         capacity = strlen(text);
         str = new char[capacity + 1];
         strcpy_s(str, capacity + 1, text);
     }
-    String(const String& other) {   // конструктор копіювання
+    // Конструктор копіювання;
+    String(const String& other) {   
         capacity = other.capacity;
         str = new char[capacity + 1];
         strcpy_s(str, capacity + 1, other.str);
@@ -38,9 +43,11 @@ public:
     const char* getString() const {
         return str;
     }
+    // Метод для введення стрічки з клавіатури; 
     void input() {
         gets_s(str, capacity + 1);
     }
+    // Методи для виведення стрічки на екран; 
     void print() const {
         cout << str << "\n";
     }
@@ -178,6 +185,70 @@ public:
 
         deleteString(oldText);
         insertString(newText, pos);
+    }
+
+    bool operator==(const String& other) const {
+        int len1 = strlen(str);
+        int len2 = strlen(other.str);
+        
+        if(len1 != len2) return false;
+
+        for (int i = 0; i < len1; i++)
+        {
+            if (str[i] != other.str[i]) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    bool operator!=(const String& other) const {
+        return !(*this == other);
+    }
+
+    bool operator<(const String& other) const {
+        return strcmp(str, other.str) < 0;
+    }
+
+    bool operator>(const String& other) const {
+        return strcmp(str, other.str) > 0;
+    }
+
+    String operator+(const String& other) const {
+        int newLen = strlen(str) + strlen(other.str);
+        String result(newLen);
+        strcpy_s(result.str, newLen + 1, str);
+        strcat_s(result.str, newLen + 1, other.str);
+        return result;
+    }
+
+    String& operator=(const String& other) {
+        if (this != &other) {
+            delete[] str;
+            capacity = other.capacity;
+            str = new char[capacity + 1];
+            strcpy_s(str, capacity + 1, other.str);
+        }
+        return *this;
+    }
+
+    // Для читання та зміни символу за індексом
+    char& operator[](int index) {
+        int len = strlen(str);
+        if (index < 0 || index >= len) {
+            throw out_of_range("Index out of bounds"); // В попередньому завданні я пояснив що це
+        }
+        return str[index];
+    }
+
+    // Тільки для читання, для константних об'єктів
+    const char& operator[](int index) const {
+        int len = strlen(str);
+        if (index < 0 || index >= len) {
+            throw out_of_range("Index out of bounds");
+        }
+        return str[index];
     }
 };
 
