@@ -1,6 +1,9 @@
 #include <iostream>
 #include <cstdlib> // rand(), srand()
 #include <ctime>   // time()
+#include <stdexcept> // throw
+#include <cstdio>  // sprintf_s()
+#include <cstring> // strcat_s()
 using namespace std;
 
 class Vector {
@@ -65,6 +68,7 @@ public:
     void add_position(int value, int position) {
         if (position < 0 || position > size) { // Перевіряємо, чи існує така позиція
             cout << "Error: Invalid position!\n";
+            system("pause");
             return;
         }
         int* p = new int[size + 1];
@@ -84,6 +88,7 @@ public:
     }
     void remove_begin() {
         if (size == 0) return; // Якщо масив порожній, нічого не робимо
+        if (size == 1) { remove_arr(); return; }
         int* p = new int[size - 1];
         for (int i = 0; i < size - 1; i++)
         {
@@ -96,6 +101,7 @@ public:
     }
     void remove_end() {
         if (size == 0) return;
+        if (size == 1) { remove_arr(); return; }
         int* p = new int[size - 1];
         for (int i = 0; i < size - 1; i++)
         {
@@ -109,8 +115,10 @@ public:
     void remove_position(int position) {
         if (position < 0 || position >= size) { // Тут >= бо не можна видалити елемент за межами
             cout << "Error: Invalid position!\n";
+            system("pause");
             return;
         }
+        if (size == 1) { remove_arr(); return; }
         int* p = new int[size - 1];
         for (int i = 0; i < position; i++)
         {
@@ -133,6 +141,7 @@ public:
     int return_max() const {
         if (size == 0) {
             cout << "Array is empty!\n";
+            system("pause");
             return 0;
         }
         int max = data[0];
@@ -147,6 +156,7 @@ public:
     int return_min() const {
         if (size == 0) {
             cout << "Array is empty!\n";
+            system("pause");
             return 0;
         }
         int min = data[0];
@@ -164,6 +174,7 @@ public:
     int return_byIndex(int index) const {
         if (index < 0 || index >= size) {
             cout << "Error: Invalid index!\n";
+            system("pause");
             return 0;
         }
         return data[index];
@@ -256,6 +267,43 @@ public:
         }
         return data[index];
     }
+
+    void operator()(int value) {
+        for (int i = 0; i < size; i++)
+        {
+            data[i] += value;
+        }
+    }
+
+    operator int() const {
+        int sum = 0;
+        for (int i = 0; i < size; i++)
+        {
+            sum += data[i];
+        }
+        return sum;
+    }
+
+    operator char* () const {
+        if (size == 0) {
+            char* emptyStr = new char[1];
+            emptyStr[0] = '\0';
+            return emptyStr;
+        }
+
+        int bufferSize = size * 12 + 1;     // Одне ціле число може займати до 11 символів (наприклад, -1234567890) + 1 пробіл
+        char* strResult = new char[bufferSize];
+        strResult[0] = '\0';
+
+        char temp[20];
+        for (int i = 0; i < size; i++)
+        {
+            sprintf_s(temp, "%d ", data[i]);    // Перетворюємо число на текст
+            strcat_s(strResult, bufferSize, temp);  // Об'єднання двох стрічок
+        }
+
+        return strResult;
+    }
 };
 
 int menu() {
@@ -287,8 +335,31 @@ int main()
 {
     srand(time(NULL));
     
+    Vector testV(5);
+    testV.set_arr();
+    testV.print_arr();
+    cout << "\n";
+
+    testV(100);
+    testV.print_arr();
+
+    int sum = testV;
+    cout << "Sum of elements: " << sum << "\n";
+    char* strOutput = testV;
+    cout << "Vector as char*: " << strOutput << "\n";
+    delete[] strOutput;
+
+    cout << "--------------------------------------------------------\n\n\n";
+
     Vector v(10);
     v.set_arr();
+    v.print_arr();
+    Vector v2 = v;
+    Vector v3 = v + v2;
+    cout << "\nv == v2: " << (v == v2 ? "True" : "False") << "\n";
+    v3.print_arr();
+    cout << "\nElement v[0]: " << v[0] << "\n\n";;
+    system("pause");
 
     int element, position, index;
 

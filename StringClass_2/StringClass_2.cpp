@@ -45,7 +45,7 @@ public:
     }
     // Метод для введення стрічки з клавіатури; 
     void input() {
-        gets_s(str, capacity + 1);
+        cin.getline(str, capacity + 1);
     }
     // Методи для виведення стрічки на екран; 
     void print() const {
@@ -250,6 +250,19 @@ public:
         }
         return str[index];
     }
+
+    int operator()(char symbol) const {
+        int len = strlen(str);
+        for (int i = 0; i < len; i++)
+        {
+            if (str[i] == symbol) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    operator int() const { return size(); }
 };
 
 int menu() {
@@ -272,6 +285,15 @@ int menu() {
 
 int main()
 {
+    String testStr("Hello World");
+    cout << testStr[0] << "\n";
+    char searchChar = 'W';
+    int index = testStr(searchChar);
+    cout << "Index of '" << searchChar << "': " << index << "\n";
+    
+    cout << int(testStr) << "\n\n";
+    
+
     String str1;    // 1. Конструктор за замовчуванням
     cout << "Enter first string: ";
     str1.input();
@@ -289,12 +311,18 @@ int main()
 
     char text[100];
     cout << "\nEnter third string: ";
-    gets_s(text, 100);
+    cin.getline(text, 100);
 
     String str3(text);
 
     cout << "Third string: ";
     str3.print();
+
+    String str4 = str1 + str2;
+    str4.print();
+    cout << "\n";
+    cout << "str1 == str2: " << (str1 == str2 ? "Yes" : "No") << "\n";
+    system("pause");
 
     char symbol, oldChar, newChar;
     int position;
@@ -320,7 +348,7 @@ int main()
         case 2:
             cin.ignore();
             cout << "Enter text: ";
-            gets_s(text, 100);
+            cin.getline(text, 100);
             cout << "Enter position: ";
             cin >> position;
             str1.insertString(text, position);
@@ -333,7 +361,7 @@ int main()
         case 4:
             cin.ignore();
             cout << "Enter text: ";
-            gets_s(text, 100);
+            cin.getline(text, 100);
             str1.deleteString(text);
             break;
         case 5:
@@ -346,15 +374,15 @@ int main()
         case 6:
             cin.ignore();
             cout << "Enter old string: ";
-            gets_s(oldText, 100);
+            cin.getline(oldText, 100);
             cout << "Enter new string: ";
-            gets_s(newText, 100);
+            cin.getline(newText, 100);
             str1.replaceString(oldText, newText);
             break;
         case 7:
             cin.ignore();
             cout << "Enter text to find: ";
-            gets_s(text, 100);
+            cin.getline(text, 100);
             position = str1.find(text);
             if (position != -1)
                 cout << "Found at index: " << position << "\n";
