@@ -36,6 +36,7 @@
   <Project Path="Guess the word/Guess the word.vcxproj" Id="72b68010-def5-4d3e-b29a-daf0963ed913" />
   <Project Path="key/key.vcxproj" Id="ff779c60-80a7-4827-83f2-9435ed3c3107" />
   <Project Path="Lab2_TrainSystem/Lab2_TrainSystem.vcxproj" Id="d1eff1a0-b84e-4447-8a67-048458ecd208" />
+  <Project Path="Lab3_OperatorOverloading/Lab3_OperatorOverloading.vcxproj" Id="2a9f9b26-6177-46b4-8831-d28694453a47" />
   <Project Path="MatrixFileIO_4/MatrixFileIO_4.vcxproj" Id="33e2dea5-674b-4e61-a0c4-cfa511bc488b" />
   <Project Path="OOP_1/OOP_1.vcxproj" Id="35377a18-27b1-46ea-95b9-e2c2a93ab25c" />
   <Project Path="OOP_2/OOP_2.vcxproj" Id="7f58d4a1-7f07-4212-9d91-46e9d911272f" />
