@@ -46,6 +46,7 @@
   <Project Path="Pointers2/Pointers2.vcxproj" Id="8713de10-0f69-44c1-b348-201bd60abca8" />
   <Project Path="StringClass_2/StringClass_2.vcxproj" Id="d9017836-e05b-40d9-bdae-d70bf7d468a9" />
   <Project Path="StringOperations/StringOperations.vcxproj" Id="782352a0-6ee7-4d5f-8769-578a0b2ae5bf" />
+  <Project Path="StringRemoveZ_AppendABC/StringRemoveZ_AppendABC.vcxproj" Id="ea27e14f-ac58-4a24-85e0-88c8e04ea687" />
   <Project Path="Strings_Classwork/Strings_Classwork.vcxproj" Id="b23ff4fa-140c-4745-b9f3-ea7acd7345a2" />
   <Project Path="Strings_Homework1/Strings_Homework1.vcxproj" Id="a90cf2fa-3aff-4fd3-998e-5e54d9c027d5" />
   <Project Path="Strings_Homework2/Strings_Homework2.vcxproj" Id="8ed956d1-1456-4391-a4c6-782f22a4cfcd" />
@@ -54,6 +55,7 @@
   <Project Path="Strings_Homework5/Strings_Homework5.vcxproj" Id="4438201a-98db-45f2-b403-74e13ddff4d2" />
   <Project Path="Strings_Homework6/Strings_Homework6.vcxproj" Id="144d6656-5e8f-4d08-a6ce-a66120086562" />
   <Project Path="Strings_Homework7/Strings_Homework7.vcxproj" Id="26d37566-9504-48f7-a815-d3cad4485439" />
+  <Project Path="StringTextProcessor/StringTextProcessor.vcxproj" Id="0c456105-d643-4abd-a3d8-42fe96f7b783" />
   <Project Path="StructArrayFileIO_7/StructArrayFileIO_7.vcxproj" Id="7db5f55e-f64c-4253-8f75-046a85b8d828" />
   <Project Path="StudentStructIO_6/StudentStructIO_6.vcxproj" Id="dfa27cdf-c0e9-4d43-8c95-b5f417f984c2" />
   <Project Path="Task1_WashingMachine/Task1_WashingMachine.vcxproj" Id="d77375ba-ddc7-4cd9-8020-0c2153a02553" />
