@@ -62,6 +62,7 @@
   <Project Path="Task2_PointsDistance/Task2_PointsDistance.vcxproj" Id="f89b0151-f99b-488a-bf50-caa82fa56fb8" />
   <Project Path="Task3_Garage/Task3_Garage.vcxproj" Id="8f060363-5b3b-4b5b-9987-00cea9286aff" />
   <Project Path="Task4_VideoStore/Task4_VideoStore.vcxproj" Id="050fb4aa-d929-4a4b-8367-79580654a916" />
+  <Project Path="TemplatePoint3D/TemplatePoint3D.vcxproj" Id="56b5da3a-5284-4791-80fc-8ff4416f6d5c" />
   <Project Path="TEST/TEST.vcxproj" Id="3eaa5057-8e80-4d0c-be26-d1e30e4dc35f" />
   <Project Path="TextEncryptionTool_8/TextEncryptionTool_8.vcxproj" Id="77531f04-ba4d-4d55-b9a7-e5e2055b4ef1" />
   <Project Path="Tic-tac-toe/Tic-tac-toe.vcxproj" Id="2897da57-25c1-4608-b6e5-86440b4a3a52" />
