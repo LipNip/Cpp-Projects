@@ -4,10 +4,12 @@
 #include <stdexcept> // throw
 #include <cstdio>  // sprintf_s()
 #include <cstring> // strcat_s()
+#include <string> // string, to_string(), c_str()
 using namespace std;
 
+template <typename T>
 class Vector {
-    int* data;
+    T* data;
     int size;
 public:
     Vector() {
@@ -16,11 +18,11 @@ public:
     }
     Vector(int size) {
         this->size = size;
-        data = new int[size]{0};
+        data = new T[size]{};
     }
     Vector(const Vector& other) {
         this->size = other.size;
-        this->data = new int[other.size]; // size
+        this->data = new T[other.size]; // size
         for (int i = 0; i < size; i++)
         {
             this->data[i] = other.data[i];
@@ -32,7 +34,7 @@ public:
     void set_arr() {
         for (int i = 0; i < size; i++)
         {
-            data[i] = rand() % 101 - 50;
+            data[i] = (T)(rand() % 101 - 50);
         }
     }
     void print_arr() const {
@@ -41,8 +43,8 @@ public:
             cout << data[i] << " ";
         }
     }
-    void add_end(int value) {
-        int* p = new int[size + 1];
+    void add_end(T value) {
+        T* p = new T[size + 1];
         for (int i = 0; i < size; i++)
         {
             p[i] = data[i];
@@ -53,8 +55,8 @@ public:
         p = nullptr;
         size++;
     }
-    void add_begin(int value) {
-        int* p = new int[size + 1];
+    void add_begin(T value) {
+        T* p = new T[size + 1];
         p[0] = value;
         for (int i = 0; i < size; i++)
         {
@@ -65,13 +67,13 @@ public:
         p = nullptr;
         size++;
     }
-    void add_position(int value, int position) {
+    void add_position(T value, int position) {
         if (position < 0 || position > size) { // Перевіряємо, чи існує така позиція
             cout << "Error: Invalid position!\n";
             system("pause");
             return;
         }
-        int* p = new int[size + 1];
+        T* p = new T[size + 1];
         for (int i = 0; i < position; i++)
         {
             p[i] = data[i];
@@ -89,7 +91,7 @@ public:
     void remove_begin() {
         if (size == 0) return; // Якщо масив порожній, нічого не робимо
         if (size == 1) { remove_arr(); return; }
-        int* p = new int[size - 1];
+        T* p = new T[size - 1];
         for (int i = 0; i < size - 1; i++)
         {
             p[i] = data[i + 1];
@@ -102,7 +104,7 @@ public:
     void remove_end() {
         if (size == 0) return;
         if (size == 1) { remove_arr(); return; }
-        int* p = new int[size - 1];
+        T* p = new T[size - 1];
         for (int i = 0; i < size - 1; i++)
         {
             p[i] = data[i];
@@ -119,7 +121,7 @@ public:
             return;
         }
         if (size == 1) { remove_arr(); return; }
-        int* p = new int[size - 1];
+        T* p = new T[size - 1];
         for (int i = 0; i < position; i++)
         {
             p[i] = data[i];
@@ -138,13 +140,13 @@ public:
         data = nullptr;
         size = 0;
     }
-    int return_max() const {
+    T return_max() const {
         if (size == 0) {
             cout << "Array is empty!\n";
             system("pause");
-            return 0;
+            return T();
         }
-        int max = data[0];
+        T max = data[0];
         for (int i = 0; i < size; i++)
         {
             if (max < data[i]) {
@@ -153,13 +155,13 @@ public:
         }
         return max;
     }
-    int return_min() const {
+    T return_min() const {
         if (size == 0) {
             cout << "Array is empty!\n";
             system("pause");
-            return 0;
+            return T();
         }
-        int min = data[0];
+        T min = data[0];
         for (int i = 0; i < size; i++)
         {
             if (min > data[i]) {
@@ -171,11 +173,11 @@ public:
     int return_size() const {
         return size;
     }
-    int return_byIndex(int index) const {
+    T return_byIndex(int index) const {
         if (index < 0 || index >= size) {
             cout << "Error: Invalid index!\n";
             system("pause");
-            return 0;
+            return T();
         }
         return data[index];
     }
@@ -184,7 +186,7 @@ public:
         for (int i = 0; i < size - 1; i++) {
             for (int j = 0; j < size - 1 - i; j++) {
                 if (data[j] > data[j + 1]) {
-                    int temp = data[j];
+                    T temp = data[j];
                     data[j] = data[j + 1];
                     data[j + 1] = temp;
                 }
@@ -195,7 +197,7 @@ public:
         for (int i = 0; i < size - 1; i++) {
             for (int j = 0; j < size - 1 - i; j++) {
                 if (data[j] < data[j + 1]) {
-                    int temp = data[j];
+                    T temp = data[j];
                     data[j] = data[j + 1];
                     data[j + 1] = temp;
                 }
@@ -204,7 +206,7 @@ public:
     }
     void reverse_arr() {
         for (int i = 0; i < size / 2; i++) {
-            int temp = data[i];
+            T temp = data[i];
             data[i] = data[size - 1 - i];
             data[size - 1 - i] = temp;
         }
@@ -241,7 +243,7 @@ public:
             delete[] data;
             size = other.size;
             if (size > 0) {
-                data = new int[size];
+                data = new T[size];
                 for (int i = 0; i < size; i++)
                 {
                     data[i] = other.data[i];
@@ -254,29 +256,29 @@ public:
         return *this;
     }
 
-    int& operator[](int index) {
+    T& operator[](int index) {
         if (index < 0 || index >= size) {
             throw out_of_range("Index out of bounds");
         }
         return data[index];
     }
 
-    const int& operator[](int index) const {
+    const T& operator[](int index) const {
         if (index < 0 || index >= size) {
             throw out_of_range("Index out of bounds");
         }
         return data[index];
     }
 
-    void operator()(int value) {
+    void operator()(T value) {
         for (int i = 0; i < size; i++)
         {
             data[i] += value;
         }
     }
 
-    operator int() const {
-        int sum = 0;
+    operator T() const {
+        T sum = T();
         for (int i = 0; i < size; i++)
         {
             sum += data[i];
@@ -291,6 +293,7 @@ public:
             return emptyStr;
         }
 
+        /*      Старий код, тільки для int
         int bufferSize = size * 12 + 1;     // Одне ціле число може займати до 11 символів (наприклад, -1234567890) + 1 пробіл
         char* strResult = new char[bufferSize];
         strResult[0] = '\0';
@@ -301,6 +304,16 @@ public:
             sprintf_s(temp, "%d ", data[i]);    // Перетворюємо число на текст
             strcat_s(strResult, bufferSize, temp);  // Об'єднання двох стрічок
         }
+        */
+
+        string tempStr = "";
+        for (int i = 0; i < size; i++)
+        {
+            tempStr += to_string(data[i]) + " ";
+        }
+
+        char* strResult = new char[tempStr.length() + 1];
+        strcpy_s(strResult, tempStr.length() + 1, tempStr.c_str()); // c_str() з класу string, переводить з string до const char*
 
         return strResult;
     }
@@ -335,7 +348,7 @@ int main()
 {
     srand(time(NULL));
     
-    Vector testV(5);
+    Vector<int> testV(5);
     testV.set_arr();
     testV.print_arr();
     cout << "\n";
@@ -351,11 +364,11 @@ int main()
 
     cout << "--------------------------------------------------------\n\n\n";
 
-    Vector v(10);
+    Vector<int> v(10);
     v.set_arr();
     v.print_arr();
-    Vector v2 = v;
-    Vector v3 = v + v2;
+    Vector<int> v2 = v;
+    Vector<int> v3 = v + v2;
     cout << "\nv == v2: " << (v == v2 ? "True" : "False") << "\n";
     v3.print_arr();
     cout << "\nElement v[0]: " << v[0] << "\n\n";;
