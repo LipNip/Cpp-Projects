@@ -1,5 +1,8 @@
 #include <iostream>
 #include <stdexcept>
+#include <string>
+#include <cstdlib>  // rand() srand() system()
+#include <ctime>  // time()
 using namespace std;
 
 struct element {
@@ -78,27 +81,33 @@ public:
 
     // Вставка елемента в задану позицію
     void add_position(int pos, int value) {
-        if (pos > size && pos < 0) {
+        if (pos > size || pos < 0) {
             return;
         }
-        element* new_element = new element;
-        new_element->data = value;
 
         if (!pos) {
             add_head(value);
+            return;
         }
-        else {
-            element* ptr = head;
-            int i = 0;
-            while (i++ < pos - 1) {
-                ptr = ptr->next;
-            }
-            new_element->next = ptr->next;
-            ptr->next = new_element;
+
+        if (pos == size) {
+            add_tail(value);
+            return;
         }
-        if (!pos) {
-            tail = new_element;
+
+        element* new_element = new element;
+        new_element->data = value;
+
+        element* ptr = head;
+
+        for (int i = 0; i < pos - 1; i++)
+        {
+            ptr = ptr->next;
         }
+        
+        new_element->next = ptr->next;
+        ptr->next = new_element;
+        
         size++;
     }
 
@@ -108,6 +117,10 @@ public:
         head = head->next;
         delete tmp;
         size--;
+
+        if (!head) {
+            tail = nullptr;
+        }
     }
 
     void delete_tail() {
@@ -130,7 +143,7 @@ public:
 
     // Видалення елемента із заданої позиції
     void delete_position(int pos) {
-        if (pos >= size) {
+        if (pos >= size || pos < 0) {
             return;
         }
         if (!pos) {
@@ -213,6 +226,7 @@ public:
         return count;
     }
 
+    // Переворот списку
     void reverse() {
         if (size <= 1) { return; }
 
