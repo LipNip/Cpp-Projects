@@ -43,6 +43,8 @@
   <Project Path="OOP_1/OOP_1.vcxproj" Id="35377a18-27b1-46ea-95b9-e2c2a93ab25c" />
   <Project Path="OOP_2/OOP_2.vcxproj" Id="7f58d4a1-7f07-4212-9d91-46e9d911272f" />
   <Project Path="OOP_3/OOP_3.vcxproj" Id="a056b621-a4eb-4c8f-bece-0c772dac2ca8" />
+  <Project Path="PassportControl_Inheritance2/PassportControl_Inheritance2.vcxproj" Id="041c54cf-b691-4c0b-a262-ca4a471f1234" />
+  <Project Path="PetHierarchy_Inheritance3/PetHierarchy_Inheritance3.vcxproj" Id="1fb33fb1-adac-4330-b82d-fb68cbc5b60b" />
   <Project Path="Pointers/Pointers.vcxproj" Id="f2af22d5-9d5f-415a-9e79-1b9e0926c871" />
   <Project Path="Pointers1/Pointers1.vcxproj" Id="d9eef690-0305-4161-9650-d6a217c8d205" />
   <Project Path="Pointers2/Pointers2.vcxproj" Id="8713de10-0f69-44c1-b348-201bd60abca8" />
@@ -60,6 +62,7 @@
   <Project Path="Strings_Homework7/Strings_Homework7.vcxproj" Id="26d37566-9504-48f7-a815-d3cad4485439" />
   <Project Path="StringTextProcessor/StringTextProcessor.vcxproj" Id="0c456105-d643-4abd-a3d8-42fe96f7b783" />
   <Project Path="StructArrayFileIO_7/StructArrayFileIO_7.vcxproj" Id="7db5f55e-f64c-4253-8f75-046a85b8d828" />
+  <Project Path="StudentManager_Inheritance1/StudentManager_Inheritance1.vcxproj" Id="ae693f02-f873-4fca-a8fb-77fdbe9c7d67" />
   <Project Path="StudentStructIO_6/StudentStructIO_6.vcxproj" Id="dfa27cdf-c0e9-4d43-8c95-b5f417f984c2" />
   <Project Path="Task1_WashingMachine/Task1_WashingMachine.vcxproj" Id="d77375ba-ddc7-4cd9-8020-0c2153a02553" />
   <Project Path="Task2_PointsDistance/Task2_PointsDistance.vcxproj" Id="f89b0151-f99b-488a-bf50-caa82fa56fb8" />
