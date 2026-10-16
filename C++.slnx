@@ -4,6 +4,7 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="ATM/ATM.vcxproj" Id="3d2f8188-dba1-4c04-ba52-bff70b560840" />
+  <Project Path="CompanyManagement_Composition/CompanyManagement_Composition.vcxproj" Id="5180817b-420d-4661-a7ab-7fb8ee4fffde" />
   <Project Path="ContactBookFile_5/ContactBookFile_5.vcxproj" Id="4589adae-cf90-4d75-b8e7-556bd9f2cfbc" />
   <Project Path="Doubly_Linked_List/Doubly_Linked_List.vcxproj" Id="a717c629-0655-4b24-9014-64270bac3b88" />
   <Project Path="DynamicArrayFunctions/DynamicArrayFunctions.vcxproj" Id="236d1b85-58a6-45d1-9d8b-96d5b7ea69b8" />
@@ -38,6 +39,7 @@
   <Project Path="key/key.vcxproj" Id="ff779c60-80a7-4827-83f2-9435ed3c3107" />
   <Project Path="Lab2_TrainSystem/Lab2_TrainSystem.vcxproj" Id="d1eff1a0-b84e-4447-8a67-048458ecd208" />
   <Project Path="Lab3_OperatorOverloading/Lab3_OperatorOverloading.vcxproj" Id="2a9f9b26-6177-46b4-8831-d28694453a47" />
+  <Project Path="LibrarySystem_Aggregation/LibrarySystem_Aggregation.vcxproj" Id="7e080396-c71f-41a6-aabe-d28026358777" />
   <Project Path="Magic8Ball/Magic8Ball.vcxproj" Id="1b3af94a-49d8-499c-9148-c3e249b85244" />
   <Project Path="MatrixFileIO_4/MatrixFileIO_4.vcxproj" Id="33e2dea5-674b-4e61-a0c4-cfa511bc488b" />
   <Project Path="OOP_1/OOP_1.vcxproj" Id="35377a18-27b1-46ea-95b9-e2c2a93ab25c" />
