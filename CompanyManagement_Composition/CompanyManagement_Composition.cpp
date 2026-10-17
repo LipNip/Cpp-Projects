@@ -8,7 +8,11 @@ class Employee {
     string name, surname, phone;
 public:
     Employee() : name("No name"), surname("No surname"), phone("No phone") {}
-    Employee(string name, string surname, string phone) : name(name), surname(surname), phone(phone) {}
+    Employee(const string& name, const string& surname, const string& phone) : name(name), surname(surname), phone(phone) {}
+
+    bool operator==(const Employee& other)const {
+        return name == other.name && surname == other.surname && phone == other.phone;
+    }
 
     void print()const {
         cout << "Name: " << name << "\n";
@@ -19,30 +23,30 @@ public:
 
 class Department {
     string departmentName;
-    Employee* manager;
-    vector<Employee*> subordinates;
+    Employee manager;
+    vector<Employee> subordinates;
 public:
-    Department(const string& departmentName, Employee* manager) : departmentName(departmentName), manager(manager) {}
+    Department(const string& departmentName, const Employee& manager) : departmentName(departmentName), manager(manager) {}
 
-    void addEmployee(Employee* employee) { subordinates.push_back(employee); }
-    void removeEmployee(Employee* employee) {
+    void addEmployee(const Employee& employee) { subordinates.push_back(employee); }
+    void removeEmployee(const Employee& employee) {
         auto it = find(subordinates.begin(), subordinates.end(), employee);
         if (it != subordinates.end()) {
             subordinates.erase(it);
         }
         else {
-            cout << "Not found!";
+            cout << "Not found!\n";
         }
     }
 
     void print()const {
         cout << "Department name: " << departmentName << "\n";
         cout << "Manager:\n";
-        manager->print();
+        manager.print();
         cout << "\n";
         for (size_t i = 0; i < subordinates.size(); i++)
         {
-            subordinates[i]->print();
+            subordinates[i].print();
             cout << "\n";
         }
     }
@@ -58,16 +62,16 @@ int main()
     Employee emp3("Oksana", "Bondar", "+380935556677");
     Employee emp4("Taras", "Tkachenko", "+380666667788");
 
-    Department dep1("IT Department", &manager1);
-    dep1.addEmployee(&emp1);
-    dep1.addEmployee(&emp2);
+    Department dep1("IT Department", manager1);
+    dep1.addEmployee(emp1);
+    dep1.addEmployee(emp2);
     dep1.print();
 
     cout << "\n";
     
-    Department dep2("Marketing Department", &manager2);
-    dep2.addEmployee(&emp3);
-    dep2.addEmployee(&emp4);
+    Department dep2("Marketing Department", manager2);
+    dep2.addEmployee(emp3);
+    dep2.addEmployee(emp4);
     dep2.print();
     
     cout << "\n\n";

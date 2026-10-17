@@ -9,7 +9,7 @@ class Book {
     int year;
 public:
     Book() : author("No author"), title("No title"), year(-1) {}
-    Book(string author, string title, int year) : author(author), title(title), year(year) {}
+    Book(const string& author, const string& title, int year) : author(author), title(title), year(year) {}   // Передаємо рядки за константним посиланням для оптимізації
 
     void print()const {
         cout << "Author: " << author << "\n";
@@ -31,7 +31,7 @@ public:
             books.erase(it);
         }
         else {
-            cout << "Not found!";
+            cout << "Not found!\n";
         }
     }
     void print()const {
