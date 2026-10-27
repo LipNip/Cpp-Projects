@@ -41,6 +41,7 @@
   <Project Path="Lab2_TrainSystem/Lab2_TrainSystem.vcxproj" Id="d1eff1a0-b84e-4447-8a67-048458ecd208" />
   <Project Path="Lab3_OperatorOverloading/Lab3_OperatorOverloading.vcxproj" Id="2a9f9b26-6177-46b4-8831-d28694453a47" />
   <Project Path="Lab6_RedBookUkraine/Lab6_RedBookUkraine.vcxproj" Id="a13d60cf-f868-4ad3-8c49-edf802151975" />
+  <Project Path="Lab8_TransportCompany/Lab8_TransportCompany.vcxproj" Id="ab767cfb-c3a5-4c8d-9acd-29ba010a206b" />
   <Project Path="LibrarySystem_Aggregation/LibrarySystem_Aggregation.vcxproj" Id="7e080396-c71f-41a6-aabe-d28026358777" />
   <Project Path="Magic8Ball/Magic8Ball.vcxproj" Id="1b3af94a-49d8-499c-9148-c3e249b85244" />
   <Project Path="MatrixFileIO_4/MatrixFileIO_4.vcxproj" Id="33e2dea5-674b-4e61-a0c4-cfa511bc488b" />
